@@ -5,8 +5,8 @@
                 <div data-flickity='{ "freeScroll": true, "contain": true, "prevNextButtons": false, "pageDots": false, "autoPlay": 5000, "fade": true}'
                     class="  main-carousel flickity-enabled is-draggable">
 
-                    @foreach ($carousels as $item)
-                        <div class="carousel-cell bg-blue-400 shadow-md relative w-full h-48">
+                    @forelse ($carousels as $item)
+                       <div class="carousel-cell bg-blue-400 shadow-md relative w-full h-48">
 
                             <img src="{{ asset('storage/carousel/' . $item->image->url) }}"
                                 class="h-48 w-full shadow-md" alt="">
@@ -15,8 +15,19 @@
                                 class="absolute bottom-3 left-3 bg-side text-white bg-main rounded-tr-full border-r-4 border-yellow-400 bg-opacity-60 p-2 px-3">
                                 <h1 class="font-medium">{{ $item->type }}</h1>
                             </div>
+                        </div>  
+                    @empty
+                        <div class="carousel-cell bg-blue-400 shadow-md relative w-full h-48">
+
+                            <img src="{{ asset('images/Carousel.png') }}"
+                                class="h-48 w-full shadow-md" alt="">
+
+                            <div
+                                class="absolute bottom-3 left-3 bg-side text-white bg-main rounded-tr-full border-r-4 border-yellow-400 bg-opacity-60 p-2 px-3">
+                                <h1 class="font-medium"></h1>
+                            </div>
                         </div>
-                    @endforeach
+                    @endforelse
 
                 </div>
             </div>
@@ -32,8 +43,8 @@
             </div>
             <div class="mt-2 mb-2 mx-10 flex flex-col items-center">
                 <div class="grid grid-cols-1 gap-3">
-                    @foreach ($news as $item)
-                        <div class="h-96 w-69   rounded-xl bg-blue-400 ">
+                   @forelse ($news as $item)
+                       <div class="h-96 w-69   rounded-xl bg-blue-400 ">
                             <div class="flex flex-col h-full ">
                                 <div class="img h-32 bg-main1 rounded-t-xl">
                                     <img src="{{ asset('storage/announcement/' . $item->image->url) }}"
@@ -67,7 +78,14 @@
                                 </div>
                             </div>
                         </div>
-                    @endforeach
+                   @empty
+                       <div class="h-96 w-69   rounded-xl  ">
+                            <div class="img h-96 w-69  bg-main1 rounded-xl">
+                                    <img src="{{ asset('images/News.png') }}"
+                                        class="object-fit h-full w-full opacity-80 rounded-xl" alt="">
+                                </div>
+                        </div>
+                   @endforelse
 
                 </div>
 
@@ -89,8 +107,8 @@
             </div>
             <div class="mt-2 mb-2 mx-10 flex flex-col items-center">
                 <div class="grid grid-cols-1 gap-3">
-                    @foreach ($announce as $item)
-                        <div class="h-96 w-69   rounded-xl bg-blue-400 ">
+                   @forelse ($announce as $item)
+                       <div class="h-96 w-69   rounded-xl bg-blue-400 ">
                             <div class="flex flex-col h-full ">
                                 <div class="img h-32 bg-main1 rounded-t-xl">
                                     <img src="{{ asset('storage/announcement/' . $item->image->url) }}"
@@ -124,7 +142,14 @@
                                 </div>
                             </div>
                         </div>
-                    @endforeach
+                   @empty
+                        <div class="h-96 w-69   rounded-xl  ">
+                            <div class="img h-96 w-69  bg-main1 rounded-xl">
+                                    <img src="{{ asset('images/announce.png') }}"
+                                        class="object-fit h-full w-full opacity-80 rounded-xl" alt="">
+                                </div>
+                        </div>
+                   @endforelse
 
                 </div>
 

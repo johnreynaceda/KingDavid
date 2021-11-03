@@ -8,8 +8,8 @@
                             data-flickity='{ "freeScroll": true, "contain": true, "prevNextButtons": true, "pageDots": true, "autoPlay": 5000, "fade": true}'
                             class="  main-carousel flickity-enabled is-draggable">
 
-                            @foreach ($carousels as $item)
-                                <div class="carousel-cell bg-blue-400 shadow-md relative w-full h-72">
+                            @forelse ($carousels as $item)
+                                 <div class="carousel-cell bg-blue-400 shadow-md relative w-full h-72">
 
                                     @if ($item->image->url == null)
                                         <img src="" class="h-72 w-full shadow-md" alt="">
@@ -24,7 +24,21 @@
                                         <h1 class="font-medium">{{ $item->type }}</h1>
                                     </div>
                                 </div>
-                            @endforeach
+                            @empty
+                                <div class="carousel-cell bg-blue-400 shadow-md relative w-full h-72">
+
+                                   
+                                        <img src="{{ asset('images/Carousel.png') }}"
+                                            class="h-72 w-full shadow-md" alt="">
+                                   
+
+
+                                    <div
+                                        class="absolute bottom-3 left-3 bg-side text-white bg-main rounded-tr-full border-r-4 border-yellow-400 bg-opacity-60 p-2 px-3">
+                                        <h1 class="font-medium"></h1>
+                                    </div>
+                                </div>
+                            @endforelse
 
 
                         </div>

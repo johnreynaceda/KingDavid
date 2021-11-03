@@ -3,8 +3,8 @@
         <div data-flickity='{ "freeScroll": true, "contain": true, "prevNextButtons": false, "pageDots": false, "autoPlay": 5000, "fade": true}'
             class="  main-carousel flickity-enabled is-draggable">
 
-            @foreach ($carousels as $item)
-                <div class="carousel-cell bg-blue-400 shadow-md relative w-full h-96">
+            @forelse ($carousels as $item)
+                  <div class="carousel-cell bg-blue-400 shadow-md relative w-full h-96">
 
                     @if ($item->image == null)
                         <img src="" class="h-96 w-full shadow-md" alt="">
@@ -18,7 +18,21 @@
                         <h1 class="font-medium">{{ $item->type }}</h1>
                     </div>
                 </div>
-            @endforeach
+            @empty
+                <div class="carousel-cell bg-blue-400 shadow-md relative w-full h-96">
+
+                   
+                        <img src="{{ asset('images/Carousel.png')}}" class="h-96 w-full shadow-md"
+                            alt="">
+                  
+
+                    <div
+                        class="absolute bottom-3 left-3 bg-side text-white bg-main rounded-tr-full border-r-4 border-yellow-400 bg-opacity-60 p-2 px-3">
+                        <h1 class="font-medium"></h1>
+                    </div>
+                </div>
+            @endforelse
+
 
 
         </div>
@@ -46,7 +60,7 @@
                     </div>
                     <div class="mt-4">
                         <div class="grid grid-cols-3 gap-5 w-full">
-                            @foreach ($news as $item)
+                            @forelse ($news as $item)
                                 <div class="h-96 w-69  rounded-xl bg-blue-400 ">
                                     <div class="flex flex-col h-full ">
                                         <div class="img h-32 bg-main1 rounded-t-xl">
@@ -82,7 +96,14 @@
                                         </div>
                                     </div>
                                 </div>
-                            @endforeach
+                            @empty
+                                <div class="h-96 w-69  rounded-xl bg-blue-400 ">
+                                  <div class="img h-full rounded-t-xl">
+                                            <img src="{{ asset('images/News.png') }}"
+                                                class="object-fit w-full h-full opacity-80 rounded-xl" alt="">
+                                        </div>
+                                </div>
+                            @endforelse
 
 
 
@@ -115,8 +136,8 @@
                     </div>
                     <div class="mt-4">
                         <div class="grid grid-cols-3 gap-5 w-full">
-                            @foreach ($announce as $item)
-                                <div class="h-96 w-69  rounded-xl bg-blue-400 ">
+                            @forelse ($announce as $item)
+                                 <div class="h-96 w-69  rounded-xl bg-blue-400 ">
                                     <div class="flex flex-col h-full ">
                                         <div class="img h-32 bg-main1 rounded-t-xl">
                                             <img src="{{ asset('storage/announcement/' . $item->image->url) }}"
@@ -151,7 +172,14 @@
                                         </div>
                                     </div>
                                 </div>
-                            @endforeach
+                            @empty
+                               <div class="h-96 w-69  rounded-xl bg-blue-400 ">
+                                  <div class="img h-full rounded-t-xl">
+                                            <img src="{{ asset('images/announce.png') }}"
+                                                class="object-fit w-full h-full opacity-80 rounded-xl" alt="">
+                                        </div>
+                                </div> 
+                            @endforelse
 
                         </div>
                     </div>
