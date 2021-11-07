@@ -27,4 +27,20 @@ class PagesController extends Controller
     public function requirement(){
         return view('policy.requirement');
     }
+    public function news(){
+        return view('news');
+    }
+    public function view($id){
+        return view('view-news',[
+            'id' => $id,
+        ]);
+    }
+    public function viewannounce($id){
+        return view('view-announcement',[
+            'id' => $id,
+        ]);
+    }
+    public function announcement(){
+        return view('announcement');
+    }
 }

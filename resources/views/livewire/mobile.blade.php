@@ -70,11 +70,11 @@
                                     </div>
                                 </div>
                                 <div class="img h-16 rounded-b-xl">
-                                    <button
+                                    <a href="{{route('view-news',['id' => $item->id])}}"
                                         class="bg-main hover:underline flex items-center justify-center w-full text-white hover h-full rounded-b-xl">
                                         <span class="text-lg font-bold ">
                                             READ
-                                            MORE</span></button>
+                                            MORE</span></a>
                                 </div>
                             </div>
                         </div>
@@ -89,8 +89,8 @@
 
                 </div>
 
-                <button class="border-2 px-2 mt-3 text-main1 border-main1 font-bold">SEE MORE NEWS AND
-                    UPDATES</button>
+                <a href="{{route('newss')}}" class="border-2 px-2 mt-3 text-main1 border-main1 font-bold">SEE MORE NEWS AND
+                    UPDATES</a>
             </div>
         </div>
         <div class="mt-5 mx-2">
@@ -112,7 +112,7 @@
                             <div class="flex flex-col h-full ">
                                 <div class="img h-32 bg-main1 rounded-t-xl">
                                     <img src="{{ asset('storage/announcement/' . $item->image->url) }}"
-                                        class="object-fit h-full opacity-80 rounded-t-xl" alt="">
+                                        class="object-fit w-full h-full opacity-80 rounded-t-xl" alt="">
                                 </div>
                                 <div class=" flex-1 bg-white border-l border-r border-main1 p-1 px-2 ">
                                     <div class="title">
@@ -134,11 +134,11 @@
                                     </div>
                                 </div>
                                 <div class="img h-16 rounded-b-xl">
-                                    <button
+                                    <a href="{{route('view-announce',['id' => $item->id])}}"
                                         class="bg-main hover:underline flex items-center justify-center w-full text-white hover h-full rounded-b-xl">
                                         <span class="text-lg font-bold ">
                                             READ
-                                            MORE</span></button>
+                                            MORE</span></a>
                                 </div>
                             </div>
                         </div>
@@ -153,8 +153,8 @@
 
                 </div>
 
-                <button class="border-2 px-2 mt-3 text-main1 border-main1 font-bold">SEE MORE
-                    ANNOUNCEMENTS</button>
+                <a href="{{route('announce')}}" class="border-2 px-2 mt-3 text-main1 border-main1 font-bold">SEE MORE
+                    ANNOUNCEMENTS</a>
             </div>
         </div>
 

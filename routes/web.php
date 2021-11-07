@@ -33,6 +33,10 @@ Route::get('/about/organization-chart', 'App\Http\Controllers\PagesController@or
 Route::get('/academic', 'App\Http\Controllers\PagesController@academic')->name('academic');
 Route::get('/policy/admission', 'App\Http\Controllers\PagesController@admission')->name('admission');
 Route::get('/policy/requirement', 'App\Http\Controllers\PagesController@requirement')->name('requirement');
+Route::get('/news', 'App\Http\Controllers\PagesController@news')->name('newss');
+Route::get('/news/{id}', 'App\Http\Controllers\PagesController@view')->name('view-news');
+Route::get('/announcement/', 'App\Http\Controllers\PagesController@announcement')->name('announce');
+Route::get('/announcement/{id}', 'App\Http\Controllers\PagesController@viewannounce')->name('view-announce');
 
 
 

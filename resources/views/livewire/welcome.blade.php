@@ -52,7 +52,7 @@
                             <h1 class="text-xl font-bold font-nun">NEWS AND UPDATES</h1>
                         </div>
                         <div class="flex items-center ">
-                            <button
+                            <button onclick="location.href='{{route('newss')}}'"
                                 class="border-2 p-1 px-3 font-semibold border-main1 hover:bg-main1 hover:text-white">
                                 SEE MORE NEWS AND UPDATES
                             </button>
@@ -88,11 +88,11 @@
                                             </div>
                                         </div>
                                         <div class="img h-16 rounded-b-xl">
-                                            <button
+                                            <a href="{{route('view-news',['id' => $item->id])}}"
                                                 class="bg-main hover:underline flex items-center justify-center w-full text-white hover h-full rounded-b-xl">
                                                 <span class="text-lg font-bold ">
                                                     READ
-                                                    MORE</span></button>
+                                                    MORE</span></a>
                                         </div>
                                     </div>
                                 </div>
@@ -128,10 +128,10 @@
                             <h1 class="text-xl font-bold font-nun">ANNOUNCEMENTS</h1>
                         </div>
                         <div class="flex items-center ">
-                            <button
+                            <a href="{{route('announce')}}"
                                 class="border-2 p-1 px-3 font-semibold border-main1 hover:bg-main1 hover:text-white">
                                 SEE MORE ANNOUNCEMENTS
-                            </button>
+                            </a>
                         </div>
                     </div>
                     <div class="mt-4">
@@ -164,11 +164,11 @@
                                             </div>
                                         </div>
                                         <div class="img h-16 rounded-b-xl">
-                                            <button
+                                            <a href="{{route('view-announce',['id' => $item->id])}}"
                                                 class="bg-main hover:underline flex items-center justify-center w-full text-white hover h-full rounded-b-xl">
                                                 <span class="text-lg font-bold ">
                                                     READ
-                                                    MORE</span></button>
+                                                    MORE</span></a>
                                         </div>
                                     </div>
                                 </div>
