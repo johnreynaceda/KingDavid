@@ -808,7 +808,8 @@
                                 KING DAVID ACADEMY
                             </p>
                             <div class="flex space-x-6">
-                                <a href="https://www.facebook.com/King-David-Academy-Isulan-1350059765030499" class="text-gray-400 hover:text-gray-500">
+                                <a href="https://www.facebook.com/King-David-Academy-Isulan-1350059765030499"
+                                    class="text-gray-400 hover:text-gray-500">
                                     <span class="sr-only">Facebook</span>
                                     <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"
                                         aria-hidden="true">
@@ -875,11 +876,11 @@
                                                 d="M4.293 15.707a1 1 0 010-1.414L8.586 10 4.293 5.707a1 1 0 011.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z"
                                                 clip-rule="evenodd" />
                                         </svg>
-                                        <p class="text-gray-100 text-sm text-justify font-nun">Lorem Ipsum is simply
-                                            dummy
-                                            text of the printing and typesetting industry. Lorem Ipsum has been the
-                                            industry's standard dummy text ever since the 1500s, when an unknown printer
-                                            took a galley of type and scrambled it to make a type specimen book.</p>
+                                        <p class="text-gray-100 text-sm text-justify font-nun">King David Academy is a
+                                            premier educational institution recognized for its comprehensive formation
+                                            of a pupil as loving and lovable person who is physically healthy,
+                                            intellectually competent, emotionally balanced, socially gracious, morally
+                                            upright, and spiritually devout.</p>
                                     </div>
                                 </div>
                             </div>
@@ -899,11 +900,11 @@
                                                 d="M4.293 15.707a1 1 0 010-1.414L8.586 10 4.293 5.707a1 1 0 011.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z"
                                                 clip-rule="evenodd" />
                                         </svg>
-                                        <p class="text-gray-100 text-sm text-justify font-nun">Lorem Ipsum is simply
-                                            dummy
-                                            text of the printing and typesetting industry. Lorem Ipsum has been the
-                                            industry's standard dummy text ever since the 1500s, when an unknown printer
-                                            took a galley of type and scrambled it to make a type specimen book.</p>
+                                        <p class="text-gray-100 text-sm text-justify font-nun">King David Academy
+                                            provides and maintains a healthy, loving, caring, safe, and charitable
+                                            learning environment that promotes and ensures the proper development and
+                                            realization of the full potential of each pupil, taking a key role in the
+                                            transformation of society.</p>
                                     </div>
                                 </div>
                                 <div class="mt-12 md:mt-0">
